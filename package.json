@@ -1,0 +1,29 @@
+{
+  "name": "molecular_simulator_backend",
+  "version": "1.0.0",
+  "description": "Backend",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshanmittal/molecular_simulator_backend.git"
+  },
+  "license": "ISC",
+  "author": "CHE peeps",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.17.3",
+    "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
