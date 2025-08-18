@@ -3,16 +3,19 @@ import express from 'express';
 import './config/passport.js';
 import { registerMiddleware } from './middlewares/index.js';
 import authRoutes from './routes/auth.routes.js';
+import lammpsRouter from './routes/lammps.routes.js';
 
 const app = express();
 
 registerMiddleware(app);
-
+app.use(express.json());
 app.use('/auth', authRoutes);
 
 app.get('/', (req, res) => {
   res.json({ ok: true, name: 'molecular_simulator_backend' });
 });
+
+app.use('/lammps', lammpsRouter)
 
 app.use((req, res) => {
   res.status(404).json({ ok: false, message: 'Not found' });
