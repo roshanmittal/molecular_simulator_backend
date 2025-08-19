@@ -21,9 +21,10 @@ export const authController = {
     (req, res) => {
       const target = process.env.CLIENT_URL || 'http://localhost:5173';
       try {
-        return res.redirect(`${target}/auth/success`);
+        // Redirect to frontend landing page after successful authentication
+        return res.redirect(`${target}/landing`);
       } catch {
-        return res.redirect('/auth/success');
+        return res.redirect('/auth/failure');
       }
     },
   ],

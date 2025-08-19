@@ -7,7 +7,9 @@ router.get('/google', authController.googleStart);
 
 router.get('/google/callback', authController.googleCallback);
 
-router.get('/logout', authController.logout);
+router.get('/success', authController.loginSuccess);
+
+router.post('/logout', authController.logout);
 
 router.get('/failure', authController.failure);
 
