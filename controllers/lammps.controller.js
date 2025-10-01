@@ -10,7 +10,7 @@ export const lammps = async (req, res) => {
   }
 const folderPath = path.dirname(inputFile);
 const fileName = path.basename(inputFile);
-  const command = `cd ${folderPath} && lmp_serial -in ${fileName}`;
+  const command = `cd ${folderPath} && lmp -in ${fileName}`;
 
   exec(command, (error, stdout, stderr) => {
     if (error) {
