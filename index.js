@@ -12,9 +12,9 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Successfully connected to MongoDB.'))
   .catch(err => console.error('MongoDB connection error:', err));
 
+
 registerMiddleware(app);
 app.use(express.json());
-
 app.use('/auth', authRoutes);
 app.use('/lammps', lammpsRoutes);
 
