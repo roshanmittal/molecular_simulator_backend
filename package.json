@@ -12,7 +12,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "docker:build": "docker build -t molecular-simulator-backend .",
+    "docker:run": "docker-compose up",
+    "docker:stop": "docker-compose down"
   },
   "dependencies": {
     "cors": "^2.8.5",
